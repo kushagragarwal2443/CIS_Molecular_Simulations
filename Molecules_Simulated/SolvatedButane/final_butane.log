@@ -1,0 +1,728 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode:  1 threads
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.8.2-0-g26d4bd8-namd-charm-6.8.2-build-2018-Jan-11-30463
+Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (12-way SMP).
+Charm++> cpu topology info is gathered in 0.000 seconds.
+Info: NAMD Git-2018-10-19 for Linux-x86_64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60800 for multicore-linux64-iccstatic
+Info: Built Fri Oct 19 01:57:46 CDT 2018 by jim on ganymede.ks.uiuc.edu
+Info: 1 NAMD  Git-2018-10-19  Linux-x86_64-multicore  1    Kush  kushagra
+Info: Running on 1 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.00128293 s
+CkLoopLib is used in SMP with a simple dynamic scheduling (converse-level notification) but not using node-level queue
+Info: 49.2773 MB of memory in use based on /proc/self/stat
+Info: Configuration file is production.conf
+Info: Working in the current directory /home/kushagra/Downloads
+TCL: Suspending until startup complete.
+Info: EXTENDED SYSTEM FILE   butane.xsc
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               2
+Info: NUMBER OF STEPS        50000
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  24.1355 0 0
+Info: PERIODIC CELL BASIS 2  0 21.5709 0
+Info: PERIODIC CELL BASIS 3  0 0 21.5499
+Info: PERIODIC CELL CENTER   -2.33143 1.1895 -0.0057687
+Info: WRAPPING WATERS AROUND PERIODIC BOUNDARIES ON OUTPUT.
+Info: WRAPPING ALL CLUSTERS AROUND PERIODIC BOUNDARIES ON OUTPUT.
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: PME BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: VELOCITY FILE          butane.vel
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: DCD FILENAME           final_butane.dcd
+Info: DCD FREQUENCY          2500
+Info: DCD FIRST STEP         2500
+Info: DCD FILE WILL CONTAIN UNIT CELL DATA
+Info: XST FILENAME           final_butane.xst
+Info: XST FREQUENCY          5000
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        final_butane
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: RESTART FILENAME       final_butane.restart
+Info: RESTART FREQUENCY      2500
+Info: BINARY RESTART FILES WILL BE USED
+Info: SWITCHING ACTIVE
+Info: VDW FORCE SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      16
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0.555
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        19.055
+Info: ENERGY OUTPUT STEPS    500
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    1000
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   303.15
+Info: LANGEVIN USING BBK INTEGRATOR
+Info: LANGEVIN DAMPING COEFFICIENT IS 1 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Info: LANGEVIN PISTON PRESSURE CONTROL ACTIVE
+Info:        TARGET PRESSURE IS 1.01325 BAR
+Info:     OSCILLATION PERIOD IS 50 FS
+Info:             DECAY TIME IS 25 FS
+Info:     PISTON TEMPERATURE IS 303.15 K
+Info:       PRESSURE CONTROL IS GROUP-BASED
+Info:    INITIAL STRAIN RATE IS 2.91621e-05 2.91621e-05 2.91621e-05
+Info:       CELL FLUCTUATION IS ISOTROPIC
+Info: PARTICLE MESH EWALD (PME) ACTIVE
+Info: PME TOLERANCE               1e-06
+Info: PME EWALD COEFFICIENT       0.257952
+Info: PME INTERPOLATION ORDER     6
+Info: PME GRID DIMENSIONS         28 24 24
+Info: PME MAXIMUM GRID SPACING    1
+Info: Attempting to read FFTW data from FFTW_NAMD_Git-2018-10-19_Linux-x86_64-multicore.txt
+Info: Optimizing 6 FFT steps.  1... 2... 3... 4... 5... 6...   Done.
+Info: Writing FFTW data to FFTW_NAMD_Git-2018-10-19_Linux-x86_64-multicore.txt
+Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      1
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RIGID BONDS TO HYDROGEN : ALL
+Info:         ERROR TOLERANCE : 1e-08
+Info:          MAX ITERATIONS : 100
+Info: RIGID WATER USING SETTLE ALGORITHM
+Info: RANDOM NUMBER SEED     1540336289
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         solvated_Butane.pdb
+Info: STRUCTURE FILE         solvated_Butane.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             toppar/par_all36m_prot.prm
+Info: PARAMETERS             toppar/par_all36_na.prm
+Info: PARAMETERS             toppar/par_all36_carb.prm
+Info: PARAMETERS             toppar/par_all36_lipid.prm
+Info: PARAMETERS             toppar/par_all36_cgenff.prm
+Info: PARAMETERS             toppar_water_ions.str
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: BINARY COORDINATES     butane.coor
+Info: SUMMARY OF PARAMETERS:
+Info: 953 BONDS
+Info: 2799 ANGLES
+Info: 6874 DIHEDRAL
+Info: 196 IMPROPER
+Info: 6 CROSSTERM
+Info: 355 VDW
+Info: 94 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 0.00398183
+Info: Reading pdb file solvated_Butane.pdb
+Info: TIME FOR READING PDB FILE: 0.000976801
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 1124 ATOMS
+Info: 753 BONDS
+Info: 394 ANGLES
+Info: 27 DIHEDRALS
+Info: 0 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 1120 RIGID BONDS
+Info: 2252 DEGREES OF FREEDOM
+Info: 374 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 374 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 6723.82 amu
+Info: TOTAL CHARGE = 0 e
+Info: MASS DENSITY = 0.995189 g/cm^3
+Info: ATOM DENSITY = 0.100184 atoms/A^3
+Info: *****************************
+Info: Reading from binary file butane.coor
+Info: 
+Info: Entering startup at 0.170659 s, 87.832 MB of memory in use
+Info: Startup phase 0 took 2.88486e-05 s, 87.832 MB of memory in use
+Info: ADDED 1174 IMPLICIT EXCLUSIONS
+Info: Startup phase 1 took 0.000634193 s, 88.3516 MB of memory in use
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
+Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+Info: Startup phase 2 took 0.00244784 s, 92.2969 MB of memory in use
+Info: Startup phase 3 took 1.81198e-05 s, 92.2969 MB of memory in use
+Info: Startup phase 4 took 2.7895e-05 s, 92.2969 MB of memory in use
+Info: Startup phase 5 took 1.3113e-05 s, 92.2969 MB of memory in use
+Info: PATCH GRID IS 1 (PERIODIC) BY 1 (PERIODIC) BY 1 (PERIODIC)
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: Reading from binary file butane.vel
+Info: REMOVING COM VELOCITY -0.0316368 0.252464 0.447595
+Info: LARGEST PATCH (0) HAS 1124 ATOMS
+Info: TORUS A SIZE 1 USING 0
+Info: TORUS B SIZE 1 USING 0
+Info: TORUS C SIZE 1 USING 0
+Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
+Info: Placed 100% of base nodes on same physical node as patch
+Info: Startup phase 6 took 0.000254869 s, 92.7578 MB of memory in use
+Info: PME using 1 and 1 processors for FFT and reciprocal sum.
+Info: PME GRID LOCATIONS: 0
+Info: PME TRANS LOCATIONS: 0
+Info: PME USING 1 GRID NODES AND 1 TRANS NODES
+Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
+Info: Startup phase 7 took 7.70092e-05 s, 92.7578 MB of memory in use
+Info: Startup phase 8 took 1.50204e-05 s, 92.7578 MB of memory in use
+Info: Startup phase 9 took 1.09673e-05 s, 92.7578 MB of memory in use
+Info: Startup phase 10 took 1.09673e-05 s, 92.7578 MB of memory in use
+Info: Startup phase 11 took 1.3113e-05 s, 92.7578 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 12 took 2.00272e-05 s, 92.7578 MB of memory in use
+Info: CREATING 25 COMPUTE OBJECTS
+Info: Startup phase 13 took 0.000166893 s, 92.7578 MB of memory in use
+Info: Startup phase 14 took 1.71661e-05 s, 92.7578 MB of memory in use
+Info: Startup phase 15 took 1.97887e-05 s, 93.0078 MB of memory in use
+Info: Finished startup at 0.174435 s, 93.0078 MB of memory in use
+
+TCL: Original numsteps 50000 will be ignored.
+TCL: Running for 50000 steps
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:       0         0.1940         8.1606         1.2129         0.0000          -3890.8296       384.1399         0.0000         0.0000       704.7754          -2792.3468       314.9726     -3497.1222     -2790.8853       314.9726            481.6935       483.4779     11219.4103       481.6935       483.4779
+
+OPENING EXTENDED SYSTEM TRAJECTORY FILE
+LDB: ============= START OF LOAD BALANCING ============== 0.326221
+LDB: ============== END OF LOAD BALANCING =============== 0.326262
+LDB: =============== DONE WITH MIGRATION ================ 0.32638
+LDB: ============= START OF LOAD BALANCING ============== 0.924771
+LDB: ============== END OF LOAD BALANCING =============== 0.924805
+LDB: =============== DONE WITH MIGRATION ================ 0.924911
+Info: Initial time: 1 CPUs 0.00749001 s/step 0.043345 days/ns 96.7188 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 1.07101
+LDB: ============== END OF LOAD BALANCING =============== 1.07104
+LDB: =============== DONE WITH MIGRATION ================ 1.07113
+LDB: ============= START OF LOAD BALANCING ============== 1.65684
+LDB: ============== END OF LOAD BALANCING =============== 1.65687
+LDB: =============== DONE WITH MIGRATION ================ 1.65696
+Info: Initial time: 1 CPUs 0.0073164 s/step 0.0423403 days/ns 96.7188 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 2.37424
+LDB: ============== END OF LOAD BALANCING =============== 2.37428
+LDB: =============== DONE WITH MIGRATION ================ 2.37438
+Info: Initial time: 1 CPUs 0.00716957 s/step 0.0414906 days/ns 96.7188 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 3.07341
+LDB: ============== END OF LOAD BALANCING =============== 3.07344
+LDB: =============== DONE WITH MIGRATION ================ 3.07355
+Info: Benchmark time: 1 CPUs 0.00698719 s/step 0.0404351 days/ns 96.7188 MB memory
+Info: Benchmark time: 1 CPUs 0.00692498 s/step 0.0400751 days/ns 96.7188 MB memory
+ENERGY:     500         0.8726         7.7021         1.3512         0.0000          -3851.9130       381.8970         0.0000         0.0000       694.5546          -2765.5355       310.4048     -3460.0901     -2763.2804       321.7811            440.3050       424.5651     11483.9450        -7.2141        -7.6037
+
+Info: Benchmark time: 1 CPUs 0.00693094 s/step 0.0401096 days/ns 96.7188 MB memory
+Info: Benchmark time: 1 CPUs 0.0068928 s/step 0.0398889 days/ns 96.7188 MB memory
+Info: Benchmark time: 1 CPUs 0.00686757 s/step 0.0397429 days/ns 96.7188 MB memory
+Info: Benchmark time: 1 CPUs 0.00685206 s/step 0.0396531 days/ns 96.7188 MB memory
+TIMING: 1000  CPU: 7.05112, 0.00703981/step  Wall: 7.0549, 0.00704032/step, 0.0958266 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    1000         0.5991         7.2296         1.8018         0.0000          -3926.0452       395.2949         0.0000         0.0000       694.2194          -2826.9004       310.2550     -3521.1198     -2826.1201       315.0944            343.6815       333.5112     11488.3196        21.4896        21.8313
+
+ENERGY:    1500         1.0937         8.5244         0.2828         0.0000          -3876.8498       372.3650         0.0000         0.0000       678.8357          -2815.7483       303.3798     -3494.5840     -2815.1059       311.9861            -34.4744       -40.2638     11484.8564       -12.9555       -11.4068
+
+TIMING: 2000  CPU: 13.9309, 0.00687982/step  Wall: 13.9342, 0.00687927/step, 0.0917235 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    2000         0.3237         9.7546         1.8415         0.0000          -3950.8157       393.7772         0.0000         0.0000       702.5466          -2842.5719       313.9765     -3545.1186     -2841.0527       312.5533            145.6089       140.4397     11293.8241        -0.8841        -0.6953
+
+ENERGY:    2500         0.0635         7.4888         1.9981         0.0000          -3994.3064       434.5746         0.0000         0.0000       728.7109          -2821.4704       325.6696     -3550.1814     -2820.7843       309.8108           1132.6063      1131.4852     11309.0113       -13.4216       -13.9893
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 2500
+OPENING COORDINATE DCD FILE
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 2500
+WRITING COORDINATES TO RESTART FILE AT STEP 2500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=2500) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 2500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=2500) takes 0.000 seconds, 96.719 MB of memory in use
+TIMING: 3000  CPU: 20.9188, 0.00698782/step  Wall: 20.9208, 0.00698662/step, 0.0912142 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    3000         0.2134         5.1573         1.2764         0.0000          -3910.3750       378.8142         0.0000         0.0000       705.1112          -2819.8024       315.1227     -3524.9137     -2817.9126       314.5769            -15.8106       -12.6221     11302.1947       -22.4971       -22.6627
+
+ENERGY:    3500         0.0415        11.3216         1.7025         0.0000          -3897.4093       366.8165         0.0000         0.0000       681.7882          -2835.7391       304.6993     -3517.5273     -2834.1993       314.1963           -179.6266      -161.4920     11257.1222       -16.3371       -16.2516
+
+TIMING: 4000  CPU: 34.1064, 0.0131877/step  Wall: 34.1075, 0.0131867/step, 0.168497 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    4000         0.4545         6.4621         0.8006         0.0000          -3881.5759       361.4892         0.0000         0.0000       673.1788          -2839.1906       300.8517     -3512.3694     -2838.0421       314.5451           -138.1430      -146.6045     11234.4795       -24.1001       -24.2812
+
+LDB: ============= START OF LOAD BALANCING ============== 41.0866
+LDB: ============== END OF LOAD BALANCING =============== 41.0867
+LDB: =============== DONE WITH MIGRATION ================ 41.0868
+LDB: ============= START OF LOAD BALANCING ============== 42.8292
+LDB: ============== END OF LOAD BALANCING =============== 42.8293
+LDB: =============== DONE WITH MIGRATION ================ 42.8295
+ENERGY:    4500         0.0588         9.6077         1.7578         0.0000          -3909.7922       360.6202         0.0000         0.0000       705.7561          -2831.9916       315.4109     -3537.7477     -2830.4684       311.2162           -187.4639      -204.2410     11166.3034        -6.6081        -7.3742
+
+TIMING: 5000  CPU: 50.2976, 0.0161912/step  Wall: 50.3006, 0.0161931/step, 0.202414 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:    5000         0.2993         3.4777         0.6734         0.0000          -3959.2001       404.6751         0.0000         0.0000       679.7535          -2870.3211       303.7900     -3550.0746     -2868.4858       310.0043            664.9383       652.6485     11186.4023        26.2814        26.1617
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 5000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 5000
+WRITING COORDINATES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=5000) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=5000) takes 0.000 seconds, 96.719 MB of memory in use
+ENERGY:    5500         1.1624         6.5177         0.8478         0.0000          -3888.1364       340.3109         0.0000         0.0000       667.9800          -2871.3176       298.5283     -3539.2976     -2869.6670       306.7394           -493.4831      -496.8121     11047.0046         5.0344         4.5994
+
+TIMING: 6000  CPU: 60.4613, 0.0101637/step  Wall: 60.4662, 0.0101655/step, 0.124246 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    6000         1.0430         5.6529         1.3342         0.0000          -3944.3518       355.1917         0.0000         0.0000       711.1251          -2870.0049       317.8103     -3581.1300     -2869.4883       307.9277           -449.1886      -444.0509     11173.1035        -6.9109        -5.9729
+
+ENERGY:    6500         1.1991         6.7270         0.4335         0.0000          -3993.2622       396.0881         0.0000         0.0000       702.8157          -2885.9988       314.0968     -3588.8145     -2884.3846       306.1587            675.9361       668.0710     10946.6685        11.6041        11.9071
+
+TIMING: 7000  CPU: 67.385, 0.00692374/step  Wall: 67.388, 0.00692182/step, 0.0826773 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    7000         0.1119         6.6158         0.6315         0.0000          -3974.2841       384.5269         0.0000         0.0000       685.5500          -2896.8480       306.3805     -3582.3979     -2894.7634       307.7401           -150.6256      -139.8100     11160.8021        31.1825        30.1222
+
+ENERGY:    7500         0.7840         6.6965         1.6835         0.0000          -3955.2003       326.4859         0.0000         0.0000       697.5629          -2921.9876       311.7492     -3619.5505     -2921.2120       302.9261          -1243.8342     -1231.0142     10967.0151       -18.1189       -18.0679
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 7500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 7500
+WRITING COORDINATES TO RESTART FILE AT STEP 7500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=7500) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 7500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=7500) takes 0.000 seconds, 96.719 MB of memory in use
+TIMING: 8000  CPU: 74.1888, 0.00680375/step  Wall: 74.1952, 0.00680718/step, 0.0794171 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    8000         1.0118         7.1785         0.8472         0.0000          -4001.8387       380.9088         0.0000         0.0000       670.5969          -2941.2954       299.6978     -3611.8923     -2939.8489       302.7001           -463.8177      -457.5724     11232.7267        27.1585        26.6755
+
+LDB: ============= START OF LOAD BALANCING ============== 76.3879
+LDB: ============== END OF LOAD BALANCING =============== 76.388
+LDB: =============== DONE WITH MIGRATION ================ 76.3881
+LDB: ============= START OF LOAD BALANCING ============== 77.0647
+LDB: ============== END OF LOAD BALANCING =============== 77.0648
+LDB: =============== DONE WITH MIGRATION ================ 77.0649
+ENERGY:    8500         0.1598        10.1922         0.5871         0.0000          -4056.1935       404.2953         0.0000         0.0000       687.1195          -2953.8395       307.0819     -3640.9590     -2952.3040       296.9505            431.3204       429.0365     10937.9612         7.4093         7.5670
+
+TIMING: 9000  CPU: 81.0679, 0.00687906/step  Wall: 81.0744, 0.0068792/step, 0.0783465 hours remaining, 96.718750 MB of memory in use.
+ENERGY:    9000         0.6231         7.6696         0.6579         0.0000          -4044.1206       399.8495         0.0000         0.0000       689.9240          -2945.3965       308.3353     -3635.3205     -2942.8167       293.9261            184.5867       162.5442     11078.7421        21.9428        21.5213
+
+ENERGY:    9500         0.1666        10.8287         0.4025         0.0000          -3990.3364       383.0353         0.0000         0.0000       694.2572          -2901.6462       310.2719     -3595.9034     -2898.9870       299.0915           -291.0161      -315.7932     11212.5754         3.2453         3.4068
+
+TIMING: 10000  CPU: 89.4596, 0.00839172/step  Wall: 89.4635, 0.00838909/step, 0.0932121 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   10000         0.4454        13.2830         1.4266         0.0000          -3967.3777       404.3855         0.0000         0.0000       665.8079          -2882.0292       297.5575     -3547.8371     -2880.9186       305.9775            257.1323       238.8490     11283.9910         5.8104         5.6554
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 10000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 10000
+WRITING COORDINATES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=10000) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=10000) takes 0.000 seconds, 96.719 MB of memory in use
+ENERGY:   10500         0.9343        11.1689         0.4146         0.0000          -3983.2303       366.2029         0.0000         0.0000       711.5987          -2892.9109       318.0220     -3604.5097     -2891.9610       309.5808           -730.8546      -711.9069     11238.4083        16.7630        16.2810
+
+TIMING: 11000  CPU: 111.663, 0.022203/step  Wall: 111.671, 0.0222076/step, 0.240583 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   11000         0.0327        12.3848         0.8087         0.0000          -3948.2137       353.1376         0.0000         0.0000       669.3837          -2912.4662       299.1556     -3581.8499     -2910.6299       304.5800           -877.8309      -886.1325     11162.6257        25.0601        25.1061
+
+ENERGY:   11500         0.1272         8.2423         1.9337         0.0000          -3966.2760       359.7701         0.0000         0.0000       695.7947          -2900.4081       310.9590     -3596.2028     -2899.6899       303.2020           -846.9100      -851.2260     11247.9441         2.1960         2.7577
+
+TIMING: 12000  CPU: 125.29, 0.0136275/step  Wall: 125.299, 0.0136278/step, 0.143849 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   12000         1.3082         7.2333         1.0013         0.0000          -4042.2363       431.7239         0.0000         0.0000       674.1772          -2926.7925       301.2979     -3600.9696     -2924.0940       302.8031           1409.2195      1404.1933     10840.4575       -33.9310       -35.0225
+
+LDB: ============= START OF LOAD BALANCING ============== 128.842
+LDB: ============== END OF LOAD BALANCING =============== 128.842
+LDB: =============== DONE WITH MIGRATION ================ 128.842
+LDB: ============= START OF LOAD BALANCING ============== 130.002
+LDB: ============== END OF LOAD BALANCING =============== 130.002
+LDB: =============== DONE WITH MIGRATION ================ 130.002
+ENERGY:   12500         1.3416         6.6972         0.4994         0.0000          -3944.9813       352.6370         0.0000         0.0000       674.1852          -2909.6209       301.3015     -3583.8061     -2908.0659       301.0508           -994.5069      -993.6834     11197.4453        24.7558        25.0582
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 12500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 12500
+WRITING COORDINATES TO RESTART FILE AT STEP 12500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=12500) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 12500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=12500) takes 0.000 seconds, 96.719 MB of memory in use
+TIMING: 13000  CPU: 134.606, 0.00931565/step  Wall: 134.615, 0.00931596/step, 0.0957474 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   13000         1.1525         7.4017         1.1400         0.0000          -3954.8691       363.7757         0.0000         0.0000       670.8190          -2910.5803       299.7971     -3581.3993     -2907.9119       300.2563           -673.1030      -676.7603     11129.2933       -11.9176       -11.2901
+
+ENERGY:   13500         0.4522         4.6998         1.1245         0.0000          -3974.8000       399.4312         0.0000         0.0000       682.3709          -2886.7213       304.9597     -3569.0922     -2885.7091       308.0306            795.2295       826.2448     10929.7427       -22.9204       -23.8981
+
+TIMING: 14000  CPU: 141.638, 0.0070318/step  Wall: 141.645, 0.0070303/step, 0.070303 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   14000         0.1191         7.5288         0.8243         0.0000          -3964.1041       364.8603         0.0000         0.0000       675.0374          -2915.7342       301.6823     -3590.7716     -2915.9429       303.5806           -180.8045      -182.3811     11018.1198         6.2572         5.8264
+
+ENERGY:   14500         0.4878         4.6069         1.3648         0.0000          -3935.3404       382.9919         0.0000         0.0000       673.3937          -2872.4952       300.9477     -3545.8889     -2871.4500       303.4386           -236.4525      -229.1265     11359.5305        11.4403        11.4478
+
+TIMING: 15000  CPU: 150.029, 0.0083917/step  Wall: 150.037, 0.0083923/step, 0.0815918 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   15000         0.5666         3.7568         0.4132         0.0000          -3940.6689       355.5899         0.0000         0.0000       652.5393          -2927.8032       291.6276     -3580.3425     -2926.5358       301.2820           -636.2481      -607.9308     11100.8272       -14.0164       -14.3047
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 15000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 15000
+WRITING COORDINATES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=15000) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   15500         0.5825         9.8822         0.9179         0.0000          -3967.8396       402.9400         0.0000         0.0000       646.3777          -2907.1393       288.8739     -3553.5170     -2904.9264       296.8810            149.1763       141.7680     11284.2091         0.2427        -0.3180
+
+TIMING: 16000  CPU: 161.721, 0.0116914/step  Wall: 161.73, 0.0116922/step, 0.110427 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   16000         1.0713         6.4691         0.8923         0.0000          -4006.5063       434.6459         0.0000         0.0000       694.8398          -2868.5879       310.5322     -3563.4277     -2866.6625       303.1681            654.4056       656.1931     11476.0438         4.7221         5.1714
+
+LDB: ============= START OF LOAD BALANCING ============== 164.421
+LDB: ============== END OF LOAD BALANCING =============== 164.421
+LDB: =============== DONE WITH MIGRATION ================ 164.421
+LDB: ============= START OF LOAD BALANCING ============== 165.169
+LDB: ============== END OF LOAD BALANCING =============== 165.169
+LDB: =============== DONE WITH MIGRATION ================ 165.169
+ENERGY:   16500         2.3471         5.0516         1.6167         0.0000          -3926.4836       355.8298         0.0000         0.0000       698.8505          -2862.7880       312.3247     -3561.6385     -2861.2509       310.6765              1.7659       -10.6747     11166.7503         2.2183         2.4056
+
+TIMING: 17000  CPU: 169.276, 0.00755578/step  Wall: 169.284, 0.00755474/step, 0.0692518 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   17000         2.9910        10.9877         1.3312         0.0000          -4006.7542       417.8489         0.0000         0.0000       684.5308          -2889.0647       305.9250     -3573.5955     -2888.1479       305.8344            678.5005       688.1051     11149.7718       -10.7697       -10.7565
+
+ENERGY:   17500         1.9671         9.5020         2.0441         0.0000          -3898.6828       355.1047         0.0000         0.0000       660.9054          -2869.1596       295.3665     -3530.0650     -2867.2642       306.3057           -593.5835      -595.0307     11177.2281         7.5176         7.0245
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 17500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 17500
+WRITING COORDINATES TO RESTART FILE AT STEP 17500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=17500) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 17500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 18000  CPU: 176.412, 0.00713577/step  Wall: 176.421, 0.00713627/step, 0.0634335 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   18000         2.1877        10.1142         0.4583         0.0000          -4036.0264       420.5544         0.0000         0.0000       676.1413          -2926.5705       302.1757     -3602.7118     -2924.6120       302.3330            540.5998       553.1604     11194.1384         6.6740         6.7624
+
+ENERGY:   18500         0.1692         8.0113         1.0443         0.0000          -3980.1195       405.4948         0.0000         0.0000       696.5700          -2868.8299       311.3055     -3565.3998     -2867.8185       306.2689            372.6669       393.3844     11342.0621         7.2730         6.9759
+
+TIMING: 19000  CPU: 183.448, 0.00703579/step  Wall: 183.456, 0.00703547/step, 0.0605832 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   19000         0.5281         6.9202         1.0555         0.0000          -3975.6704       397.7603         0.0000         0.0000       685.1765          -2884.2298       306.2136     -3569.4063     -2883.4748       304.3597            541.6169       563.2102     11046.6382         7.0005         7.7535
+
+ENERGY:   19500         0.0507         7.3311         2.5980         0.0000          -3947.3367       367.4000         0.0000         0.0000       676.5692          -2893.3878       302.3669     -3569.9570     -2892.7840       306.0978           -696.2688      -697.0814     11285.4025        -1.4431        -2.1836
+
+TIMING: 20000  CPU: 190.636, 0.00718779/step  Wall: 190.643, 0.00718731/step, 0.0598943 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   20000         0.2513        11.5295         0.9403         0.0000          -3990.3299       391.6906         0.0000         0.0000       658.2710          -2927.6471       294.1892     -3585.9181     -2926.5319       299.2522            396.9407       382.4857     10929.6695        23.0771        23.1048
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 20000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 20000
+WRITING COORDINATES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=20000) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART VELOCITIES
+LDB: ============= START OF LOAD BALANCING ============== 194.328
+LDB: ============== END OF LOAD BALANCING =============== 194.328
+LDB: =============== DONE WITH MIGRATION ================ 194.328
+LDB: ============= START OF LOAD BALANCING ============== 195.544
+LDB: ============== END OF LOAD BALANCING =============== 195.545
+LDB: =============== DONE WITH MIGRATION ================ 195.545
+ENERGY:   20500         0.3862         7.2806         2.9734         0.0000          -4083.6751       408.4808         0.0000         0.0000       704.5290          -2960.0251       314.8624     -3664.5541     -2958.0282       295.9239            605.5259       566.8103     10868.5246        27.1589        27.2016
+
+TIMING: 21000  CPU: 208.131, 0.0174953/step  Wall: 208.142, 0.0174981/step, 0.140957 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   21000         1.2931         5.1323         1.8460         0.0000          -3947.5229       362.5526         0.0000         0.0000       659.3465          -2917.3524       294.6699     -3576.6989     -2915.8511       296.2402           -590.1470      -579.0860     11051.2665         9.2594         9.5234
+
+ENERGY:   21500         0.9915         5.3318         2.7956         0.0000          -4004.4538       422.8059         0.0000         0.0000       666.6934          -2905.8356       297.9533     -3572.5290     -2904.1933       303.3897            566.8631       568.0373     11242.7524         7.9653         7.8948
+
+TIMING: 22000  CPU: 221.471, 0.0133395/step  Wall: 221.48, 0.0133389/step, 0.103747 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   22000         0.7797         6.1125         2.3654         0.0000          -3911.5862       356.4788         0.0000         0.0000       666.9285          -2878.9213       298.0583     -3545.8498     -2876.8584       303.6646           -796.5444      -797.6351     11342.4792        31.1031        31.1390
+
+ENERGY:   22500         0.3154         7.3357         0.3493         0.0000          -3935.9797       377.2783         0.0000         0.0000       675.9989          -2874.7022       302.1120     -3550.7010     -2872.6524       310.2374           -340.8440      -342.0329     11328.5665        12.8473        12.3682
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 22500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 22500
+WRITING COORDINATES TO RESTART FILE AT STEP 22500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=22500) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 22500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 23000  CPU: 230.714, 0.00924369/step  Wall: 230.724, 0.00924324/step, 0.0693243 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   23000         2.2075         9.5403         1.5728         0.0000          -3985.1005       413.3042         0.0000         0.0000       681.3292          -2877.1466       304.4942     -3558.4758     -2875.2580       302.4724            982.2264       977.3352     11049.1401        -4.4530        -4.9479
+
+ENERGY:   23500         0.0828         8.5619         0.8596         0.0000          -3957.8674       374.4911         0.0000         0.0000       680.1958          -2893.6762       303.9876     -3573.8720     -2891.8605       304.6161           -552.4450      -555.1529     11324.8242        22.3464        22.3773
+
+TIMING: 24000  CPU: 237.766, 0.00705178/step  Wall: 237.778, 0.00705382/step, 0.0509443 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   24000         0.5653         6.2123         0.8356         0.0000          -3949.2382       353.3330         0.0000         0.0000       689.0491          -2899.2429       307.9443     -3588.2920     -2897.4930       304.7978           -355.9608      -366.1303     11040.4001         1.4215         1.4129
+
+LDB: ============= START OF LOAD BALANCING ============== 239.987
+LDB: ============== END OF LOAD BALANCING =============== 239.987
+LDB: =============== DONE WITH MIGRATION ================ 239.988
+LDB: ============= START OF LOAD BALANCING ============== 240.66
+LDB: ============== END OF LOAD BALANCING =============== 240.66
+LDB: =============== DONE WITH MIGRATION ================ 240.661
+ENERGY:   24500         0.4905         6.4984         0.9078         0.0000          -3944.6183       351.2195         0.0000         0.0000       673.8275          -2911.6745       301.1416     -3585.5020     -2910.2314       301.2631           -855.8546      -852.3085     11157.8673        -4.6729        -3.7702
+
+TIMING: 25000  CPU: 246.09, 0.0083238/step  Wall: 246.103, 0.00832521/step, 0.057814 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   25000         1.6990         8.6075         0.5215         0.0000          -4018.8278       416.1409         0.0000         0.0000       686.9079          -2904.9511       306.9874     -3591.8590     -2904.2576       297.1694            856.2629       875.6088     11044.4473         3.9336         3.1351
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 25000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 25000
+WRITING COORDINATES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=25000) takes 0.000 seconds, 96.719 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   25500         0.9998         6.5142         2.2379         0.0000          -3931.9564       358.1844         0.0000         0.0000       675.9423          -2888.0778       302.0867     -3564.0201     -2887.4354       304.0958           -305.8379      -290.8323     10896.9206         4.7917         5.3733
+
+TIMING: 26000  CPU: 253.374, 0.00728381/step  Wall: 253.386, 0.00728369/step, 0.0485579 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   26000         0.8473         7.6581         0.7259         0.0000          -3979.3026       395.2928         0.0000         0.0000       686.9051          -2887.8733       306.9861     -3574.7784     -2885.5742       305.9556            341.6274       347.2788     11183.9622        16.8069        16.9480
+
+ENERGY:   26500         0.6923         5.3691         2.6922         0.0000          -3942.9558       396.1335         0.0000         0.0000       645.4482          -2892.6205       288.4585     -3538.0686     -2891.3326       300.4255           -398.1320      -392.3510     11719.6628       -18.6302       -18.6629
+
+TIMING: 27000  CPU: 260.038, 0.00666384/step  Wall: 260.048, 0.00666185/step, 0.0425618 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   27000         2.9961         5.7556         0.3968         0.0000          -3920.5998       358.3169         0.0000         0.0000       682.1676          -2870.9669       304.8689     -3553.1344     -2869.7589       303.1357           -737.2856      -740.4794     11217.3016       -17.6186       -17.3548
+
+ENERGY:   27500         1.2699         5.1996         0.7550         0.0000          -3958.1925       375.4958         0.0000         0.0000       701.7308          -2873.7415       313.6119     -3575.4723     -2871.3836       308.9093           -249.6128      -250.7116     11145.6103        24.3993        23.9993
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 27500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 27500
+WRITING COORDINATES TO RESTART FILE AT STEP 27500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 27500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 28000  CPU: 266.805, 0.00676783/step  Wall: 266.819, 0.00677034/step, 0.0413743 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   28000         0.4150         4.3940         1.7645         0.0000          -3979.8729       415.6724         0.0000         0.0000       665.1320          -2892.4950       297.2555     -3557.6270     -2891.2450       305.3949            729.9955       719.2738     11213.9055        14.6857        14.5971
+
+LDB: ============= START OF LOAD BALANCING ============== 269.007
+LDB: ============== END OF LOAD BALANCING =============== 269.007
+LDB: =============== DONE WITH MIGRATION ================ 269.007
+LDB: ============= START OF LOAD BALANCING ============== 269.678
+LDB: ============== END OF LOAD BALANCING =============== 269.678
+LDB: =============== DONE WITH MIGRATION ================ 269.678
+ENERGY:   28500         0.5249         6.5935         0.9798         0.0000          -3974.9525       420.4651         0.0000         0.0000       653.1527          -2893.2365       291.9018     -3546.3892     -2893.0484       305.0239            694.7701       681.0073     11364.7961       -11.6420       -11.6261
+
+TIMING: 29000  CPU: 273.649, 0.00684384/step  Wall: 273.661, 0.00684286/step, 0.0399167 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   29000         0.4417         7.6188         0.7308         0.0000          -3958.9268       397.9897         0.0000         0.0000       678.3918          -2873.7540       303.1814     -3552.1458     -2872.6407       302.7822           -145.9615      -124.0796     11475.9350        18.8303        18.6067
+
+ENERGY:   29500         0.0370         7.0901         1.2345         0.0000          -3948.8354       367.6773         0.0000         0.0000       660.3468          -2912.4497       295.1169     -3572.7965     -2911.7267       303.4809           -588.1505      -598.9909     11340.8544        -9.6626        -9.9841
+
+TIMING: 30000  CPU: 287.977, 0.0143276/step  Wall: 287.99, 0.0143286/step, 0.0796032 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   30000         0.8295         9.0287         2.3234         0.0000          -3978.8511       397.2645         0.0000         0.0000       674.9278          -2894.4772       301.6333     -3569.4050     -2893.1399       305.2789             71.2484        71.7719     11187.0697       -16.8289       -16.9081
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 30000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 30000
+WRITING COORDINATES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   30500         0.1661         8.5843         1.4561         0.0000          -3967.8037       381.8052         0.0000         0.0000       692.7541          -2883.0380       309.6001     -3575.7921     -2882.3197       302.4772            419.1880       409.7249     11022.0111         7.2034         7.6620
+
+TIMING: 31000  CPU: 308.728, 0.0207512/step  Wall: 308.74, 0.0207495/step, 0.109511 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   31000         0.6633         9.8931         2.8561         0.0000          -3974.3635       384.5166         0.0000         0.0000       684.0866          -2892.3478       305.7265     -3576.4345     -2890.3517       307.4913            -16.9920       -23.4138     11156.5804        -1.7218        -1.6032
+
+ENERGY:   31500         0.8886         7.7241         2.4703         0.0000          -3967.3352       363.1865         0.0000         0.0000       702.6647          -2890.4010       314.0293     -3593.0657     -2888.9381       309.2530           -408.9330      -396.9126     11021.4937        28.8119        29.6935
+
+TIMING: 32000  CPU: 319.888, 0.0111597/step  Wall: 319.902, 0.0111624/step, 0.0558119 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   32000         0.2615         8.3960         0.8827         0.0000          -3998.6371       407.5797         0.0000         0.0000       692.6309          -2888.8863       309.5451     -3581.5172     -2885.8283       305.8191            438.8364       449.6957     11085.3529         4.4093         4.2984
+
+LDB: ============= START OF LOAD BALANCING ============== 322.329
+LDB: ============== END OF LOAD BALANCING =============== 322.329
+LDB: =============== DONE WITH MIGRATION ================ 322.329
+LDB: ============= START OF LOAD BALANCING ============== 323.06
+LDB: ============== END OF LOAD BALANCING =============== 323.06
+LDB: =============== DONE WITH MIGRATION ================ 323.06
+ENERGY:   32500         1.3041         6.9027         1.0880         0.0000          -3976.9602       368.5290         0.0000         0.0000       682.3014          -2916.8350       304.9287     -3599.1364     -2915.2764       298.4988           -769.2772      -778.7262     11220.3033         3.2705         2.6599
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 32500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 32500
+WRITING COORDINATES TO RESTART FILE AT STEP 32500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 32500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 33000  CPU: 327.135, 0.00724767/step  Wall: 327.148, 0.00724605/step, 0.0342174 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   33000         0.6942         5.4784         0.2097         0.0000          -3986.5391       374.5836         0.0000         0.0000       681.5339          -2924.0393       304.5857     -3605.5732     -2922.6411       297.8554           -484.9822      -497.0683     11174.6070        17.5129        17.8384
+
+ENERGY:   33500         1.2763         5.0395         0.1316         0.0000          -3940.5104       363.4525         0.0000         0.0000       656.2468          -2914.3637       293.2846     -3570.6105     -2913.2185       303.0399           -561.3274      -551.8046     11377.9749       -10.0605       -10.1155
+
+TIMING: 34000  CPU: 334.139, 0.0070037/step  Wall: 334.152, 0.00700367/step, 0.0311274 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   34000         0.5964         6.3467         0.5233         0.0000          -4058.9217       458.1946         0.0000         0.0000       688.6766          -2904.5841       307.7778     -3593.2608     -2902.5002       302.6039           1618.7332      1623.4372     10998.2104       -17.8795       -18.0708
+
+ENERGY:   34500         0.4701         6.8442         1.6231         0.0000          -4023.2729       398.7333         0.0000         0.0000       701.6828          -2913.9195       313.5905     -3615.6023     -2911.8244       306.1902            400.4254       438.4308     10939.6493       -21.1416       -20.6420
+
+TIMING: 35000  CPU: 345.375, 0.0112355/step  Wall: 345.388, 0.0112359/step, 0.0468161 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   35000         0.7552         8.8656         0.5000         0.0000          -4017.3733       391.9653         0.0000         0.0000       715.9443          -2899.3430       319.9641     -3615.2873     -2897.9227       304.3914            172.0903       177.9146     10999.3506         8.9180         8.6162
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 35000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 35000
+WRITING COORDINATES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   35500         0.4872         6.6219         0.2575         0.0000          -3966.5664       418.6143         0.0000         0.0000       659.7124          -2880.8731       294.8334     -3540.5854     -2879.2026       303.6481            681.9081       679.7650     11262.5449        35.0023        35.6530
+
+TIMING: 36000  CPU: 354.81, 0.00943559/step  Wall: 354.824, 0.00943674/step, 0.0366984 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   36000         1.4000         5.5928         1.9198         0.0000          -3963.0519       358.5423         0.0000         0.0000       698.3447          -2897.2522       312.0986     -3595.5970     -2895.7341       305.0949           -504.3992      -531.4433     11040.1751         2.0950         2.9994
+
+LDB: ============= START OF LOAD BALANCING ============== 357.109
+LDB: ============== END OF LOAD BALANCING =============== 357.109
+LDB: =============== DONE WITH MIGRATION ================ 357.109
+LDB: ============= START OF LOAD BALANCING ============== 357.821
+LDB: ============== END OF LOAD BALANCING =============== 357.821
+LDB: =============== DONE WITH MIGRATION ================ 357.821
+ENERGY:   36500         1.1810         4.3800         0.7617         0.0000          -3992.3131       379.3306         0.0000         0.0000       671.7270          -2934.9328       300.2028     -3606.6598     -2932.6934       305.1201             93.5557       106.6971     11027.5273       -22.4541       -22.5570
+
+TIMING: 37000  CPU: 361.866, 0.00705569/step  Wall: 361.882, 0.00705744/step, 0.0254852 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   37000         0.1942         4.4431         0.3992         0.0000          -3965.4042       380.6624         0.0000         0.0000       667.6436          -2912.0618       298.3779     -3579.7054     -2909.7629       303.0752            128.1640       111.4046     11069.8470        -3.2125        -3.5829
+
+ENERGY:   37500         1.2916         4.9810         0.7718         0.0000          -3944.2728       330.2643         0.0000         0.0000       698.2765          -2908.6876       312.0681     -3606.9641     -2907.5269       304.5471          -1474.6742     -1475.3882     10983.9342        28.4999        27.6171
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 37500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 37500
+WRITING COORDINATES TO RESTART FILE AT STEP 37500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 37500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 38000  CPU: 369.054, 0.00718768/step  Wall: 369.071, 0.00718918/step, 0.0239639 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   38000         0.4688         6.5543         0.4839         0.0000          -4007.0596       384.4909         0.0000         0.0000       667.5789          -2947.4827       298.3490     -3615.0616     -2945.9042       298.1132           -269.0331      -272.8116     11210.6682       -14.6101       -15.4167
+
+ENERGY:   38500         0.5828         4.4023         0.3484         0.0000          -3965.7586       359.4070         0.0000         0.0000       651.6430          -2949.3751       291.2270     -3601.0181     -2947.6856       293.3962           -959.2648      -939.8433     11187.7547        16.6695        15.6222
+
+TIMING: 39000  CPU: 376.297, 0.00724383/step  Wall: 376.315, 0.00724401/step, 0.0221345 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   39000         0.4771         6.2828         1.2583         0.0000          -4110.1693       464.3464         0.0000         0.0000       683.6041          -2954.2007       305.5109     -3637.8048     -2953.5823       295.0461           1565.3019      1559.7866     11061.5650        17.9009        17.2846
+
+ENERGY:   39500         1.1061         7.5264         0.3256         0.0000          -3988.0875       371.6688         0.0000         0.0000       672.9661          -2934.4944       300.7566     -3607.4605     -2932.9906       295.9318           -691.6385      -674.5405     11360.2915         7.8329         7.6111
+
+TIMING: 40000  CPU: 386.197, 0.00989957/step  Wall: 386.213, 0.00989845/step, 0.0274957 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   40000         0.6477         6.6476         0.5828         0.0000          -4039.1487       427.6386         0.0000         0.0000       686.1198          -2917.5123       306.6352     -3603.6321     -2916.2231       296.8916            829.8963       827.8332     11244.3860       -41.1536       -40.3402
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 40000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 40000
+WRITING COORDINATES TO RESTART FILE AT STEP 40000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 40000
+FINISHED WRITING RESTART VELOCITIES
+LDB: ============= START OF LOAD BALANCING ============== 394.351
+LDB: ============== END OF LOAD BALANCING =============== 394.351
+LDB: =============== DONE WITH MIGRATION ================ 394.351
+LDB: ============= START OF LOAD BALANCING ============== 396.502
+LDB: ============== END OF LOAD BALANCING =============== 396.502
+LDB: =============== DONE WITH MIGRATION ================ 396.502
+ENERGY:   40500         0.2200         7.3766         1.5208         0.0000          -3948.5414       378.4052         0.0000         0.0000       677.0796          -2883.9392       302.5950     -3561.0188     -2882.0840       298.9313           -342.1524      -321.7884     11330.6524        15.9612        16.3999
+
+TIMING: 41000  CPU: 405.208, 0.019011/step  Wall: 405.224, 0.0190106/step, 0.0475266 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   41000         0.2632        10.1324         1.4430         0.0000          -3933.0223       355.1466         0.0000         0.0000       686.5566          -2879.4805       306.8304     -3566.0371     -2877.2360       305.5887           -526.3126      -514.9165     11161.3020        14.0307        13.5827
+
+ENERGY:   41500         0.7348         9.2019         1.9215         0.0000          -3964.3092       360.4419         0.0000         0.0000       708.7804          -2883.2286       316.7625     -3592.0090     -2882.6050       307.4881           -436.4947      -439.1921     10954.4252         3.5066         4.5628
+
+TIMING: 42000  CPU: 416.336, 0.0111276/step  Wall: 416.354, 0.0111299/step, 0.0247332 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   42000         1.2558         6.5540         1.1214         0.0000          -3908.6592       368.7111         0.0000         0.0000       664.4446          -2866.5723       296.9482     -3531.0168     -2865.5326       310.3168           -341.3087      -347.6111     11345.1103        19.0100        19.4824
+
+ENERGY:   42500         2.3590         6.5339         4.6606         0.0000          -3994.7398       430.3105         0.0000         0.0000       674.3452          -2876.5307       301.3729     -3550.8759     -2875.6869       310.6972           1199.3681      1200.5612     11096.2901        18.2576        18.1558
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 42500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 42500
+WRITING COORDINATES TO RESTART FILE AT STEP 42500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 42500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 43000  CPU: 423.563, 0.00722782/step  Wall: 423.58, 0.00722626/step, 0.0140511 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   43000         0.6792        10.6007         0.8851         0.0000          -3937.3880       375.1447         0.0000         0.0000       717.1535          -2832.9247       320.5045     -3550.0783     -2832.1680       309.1520            552.3457       538.6669     11027.0288         5.8516         6.5910
+
+ENERGY:   43500         0.2935         5.4569         1.1740         0.0000          -3948.9788       419.0968         0.0000         0.0000       671.3912          -2851.5664       300.0528     -3522.9576     -2849.7987       308.5719            917.6843       924.6016     11248.3750         2.7143         2.8109
+
+TIMING: 44000  CPU: 430.651, 0.00708768/step  Wall: 430.668, 0.00708817/step, 0.0118136 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   44000         0.5571         7.1810         2.2552         0.0000          -3951.3085       362.9361         0.0000         0.0000       676.0253          -2902.3539       302.1238     -3578.3791     -2900.7782       307.7280          -1081.4715     -1082.4742     11488.2409         3.2118         3.9794
+
+LDB: ============= START OF LOAD BALANCING ============== 434.013
+LDB: ============== END OF LOAD BALANCING =============== 434.013
+LDB: =============== DONE WITH MIGRATION ================ 434.014
+LDB: ============= START OF LOAD BALANCING ============== 435.137
+LDB: ============== END OF LOAD BALANCING =============== 435.137
+LDB: =============== DONE WITH MIGRATION ================ 435.137
+ENERGY:   44500         0.4263         6.8723         0.6835         0.0000          -3926.0997       358.2046         0.0000         0.0000       675.7019          -2884.2112       301.9793     -3559.9131     -2882.5717       304.1820           -594.7052      -594.1706     11393.9732         8.9948         8.9731
+
+TIMING: 45000  CPU: 446.746, 0.0160952/step  Wall: 446.765, 0.0160963/step, 0.022356 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   45000         1.1274         6.7090         0.7938         0.0000          -3980.3151       416.1734         0.0000         0.0000       642.7223          -2912.7892       287.2403     -3555.5115     -2911.2241       299.9987            593.7565       592.2544     11141.7543        -5.0003        -5.4415
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 45000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 45000
+WRITING COORDINATES TO RESTART FILE AT STEP 45000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 45000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   45500         0.8258         7.0623         1.8011         0.0000          -3907.4276       332.6140         0.0000         0.0000       694.5440          -2870.5803       310.4000     -3565.1243     -2869.0109       303.2812          -1342.6417     -1333.5187     11367.2432        -5.4534        -5.5600
+
+TIMING: 46000  CPU: 460.862, 0.0141156/step  Wall: 460.881, 0.0141166/step, 0.0156851 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   46000         0.9369         5.6837         2.0038         0.0000          -3994.5476       392.3436         0.0000         0.0000       703.3190          -2890.2605       314.3217     -3593.5795     -2888.6773       307.1347             11.1152        28.1510     11185.8669        13.4028        13.4536
+
+ENERGY:   46500         0.5933         6.1020         3.3203         0.0000          -3939.0274       342.6183         0.0000         0.0000       679.1148          -2907.2789       303.5045     -3586.3936     -2906.3730       303.6281          -1402.2665     -1434.4261     11400.1803         4.4692         5.2357
+
+TIMING: 47000  CPU: 470.441, 0.00957893/step  Wall: 470.462, 0.00958034/step, 0.00798362 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   47000         0.1037         4.0681         0.5971         0.0000          -3962.2709       387.0543         0.0000         0.0000       666.1720          -2904.2755       297.7203     -3570.4476     -2904.1665       302.5891            198.8090       211.5198     11085.1363        25.2288        25.3471
+
+ENERGY:   47500         1.9066         5.6731         0.5368         0.0000          -3935.7321       338.6217         0.0000         0.0000       678.4949          -2910.4990       303.2275     -3588.9939     -2908.9586       297.5842          -1042.2554     -1059.8239     11216.6107       -13.8168       -15.0704
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 47500
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 47500
+WRITING COORDINATES TO RESTART FILE AT STEP 47500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 47500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 48000  CPU: 477.357, 0.00691578/step  Wall: 477.377, 0.00691517/step, 0.00384176 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   48000         0.5893         8.5732         0.5298         0.0000          -4022.9683       407.6737         0.0000         0.0000       694.3814          -2911.2209       310.3273     -3605.6023     -2909.7227       300.7046            593.3629       597.3916     11127.3745         4.9959         5.8525
+
+LDB: ============= START OF LOAD BALANCING ============== 479.587
+LDB: ============== END OF LOAD BALANCING =============== 479.587
+LDB: =============== DONE WITH MIGRATION ================ 479.587
+LDB: ============= START OF LOAD BALANCING ============== 480.273
+LDB: ============== END OF LOAD BALANCING =============== 480.273
+LDB: =============== DONE WITH MIGRATION ================ 480.273
+ENERGY:   48500         0.7111         8.8100         0.7680         0.0000          -3989.3876       387.1121         0.0000         0.0000       675.5914          -2916.3950       301.9299     -3591.9864     -2914.7898       299.4247            -90.3644      -107.4152     11057.1465         7.9210         8.3549
+
+TIMING: 49000  CPU: 484.14, 0.00678376/step  Wall: 484.16, 0.00678287/step, 0.00188413 hours remaining, 96.718750 MB of memory in use.
+ENERGY:   49000         0.1293         6.1170         1.8164         0.0000          -4027.3716       425.3438         0.0000         0.0000       707.2500          -2886.7150       316.0785     -3593.9650     -2884.5128       301.8165            890.1212       885.0265     11119.6435         5.8022         6.0051
+
+ENERGY:   49500         0.5403         3.6625         0.2823         0.0000          -3946.9243       379.0964         0.0000         0.0000       642.8139          -2920.5289       287.2812     -3563.3429     -2918.6906       301.4840            425.9242       414.3012     10990.0657        -0.7786        -0.8059
+
+TIMING: 50000  CPU: 491.052, 0.00691182/step  Wall: 491.073, 0.00691312/step, 0 hours remaining, 96.718750 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:   50000         0.8483         6.4464         3.7729         0.0000          -3987.9507       389.6085         0.0000         0.0000       675.7992          -2911.4754       302.0228     -3587.2746     -2910.4030       300.2696            113.7245       126.9471     11168.1916        19.8490        20.7528
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 50000
+WRITING COORDINATES TO DCD FILE final_butane.dcd AT STEP 50000
+WRITING COORDINATES TO RESTART FILE AT STEP 50000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 50000
+FINISHED WRITING RESTART VELOCITIES
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 50000
+CLOSING EXTENDED SYSTEM TRAJECTORY FILE
+WRITING COORDINATES TO OUTPUT FILE AT STEP 50000
+CLOSING COORDINATE DCD FILE final_butane.dcd
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 50000
+====================================================
+
+WallClock: 491.721954  CPUTime: 491.230072  Memory: 96.718750 MB
+[Partition 0][Node 0] End of program

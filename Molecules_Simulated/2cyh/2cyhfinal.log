@@ -1,0 +1,699 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode:  1 threads
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.8.2-0-g26d4bd8-namd-charm-6.8.2-build-2018-Jan-11-30463
+Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (12-way SMP).
+Charm++> cpu topology info is gathered in 0.000 seconds.
+Info: NAMD Git-2018-10-19 for Linux-x86_64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60800 for multicore-linux64-iccstatic
+Info: Built Fri Oct 19 01:57:46 CDT 2018 by jim on ganymede.ks.uiuc.edu
+Info: 1 NAMD  Git-2018-10-19  Linux-x86_64-multicore  1    Kush  kushagra
+Info: Running on 1 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.001194 s
+CkLoopLib is used in SMP with a simple dynamic scheduling (converse-level notification) but not using node-level queue
+Info: 49.2773 MB of memory in use based on /proc/self/stat
+Info: Configuration file is production.conf
+Info: Working in the current directory /home/kushagra/Downloads
+TCL: Suspending until startup complete.
+Info: EXTENDED SYSTEM FILE   2cyhsemi.xsc
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               2
+Info: NUMBER OF STEPS        50000
+Info: STEPS PER CYCLE        20
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: VELOCITY FILE          2cyhsemi.vel
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: DCD FILENAME           2cyhfinal.dcd
+Info: DCD FREQUENCY          2500
+Info: DCD FIRST STEP         2500
+Info: DCD FILE WILL CONTAIN UNIT CELL DATA
+Info: XST FILENAME           2cyhfinal.xst
+Info: XST FREQUENCY          5000
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        2cyhfinal
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: RESTART FILENAME       2cyhfinal.restart
+Info: RESTART FREQUENCY      2500
+Info: BINARY RESTART FILES WILL BE USED
+Info: SWITCHING ACTIVE
+Info: VDW FORCE SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      16
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        18.5
+Info: ENERGY OUTPUT STEPS    500
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    1000
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   303.15
+Info: LANGEVIN USING BBK INTEGRATOR
+Info: LANGEVIN DAMPING COEFFICIENT IS 1 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RIGID BONDS TO HYDROGEN : ALL
+Info:         ERROR TOLERANCE : 1e-08
+Info:          MAX ITERATIONS : 100
+Info: RIGID WATER USING SETTLE ALGORITHM
+Info: RANDOM NUMBER SEED     1540374229
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         2cyh_autopsf.pdb
+Info: STRUCTURE FILE         2cyh_autopsf.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             toppar/par_all36m_prot.prm
+Info: PARAMETERS             toppar/par_all36_na.prm
+Info: PARAMETERS             toppar/par_all36_carb.prm
+Info: PARAMETERS             toppar/par_all36_lipid.prm
+Info: PARAMETERS             toppar/par_all36_cgenff.prm
+Info: PARAMETERS             toppar_water_ions.str
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: BINARY COORDINATES     2cyhsemi.coor
+Info: SUMMARY OF PARAMETERS:
+Info: 953 BONDS
+Info: 2799 ANGLES
+Info: 6874 DIHEDRAL
+Info: 196 IMPROPER
+Info: 6 CROSSTERM
+Info: 355 VDW
+Info: 94 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 0.27274
+Info: Reading pdb file 2cyh_autopsf.pdb
+Info: TIME FOR READING PDB FILE: 0.00227118
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 2774 ATOMS
+Info: 2715 BONDS
+Info: 4668 ANGLES
+Info: 6695 DIHEDRALS
+Info: 439 IMPROPERS
+Info: 162 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 1503 RIGID BONDS
+Info: 6819 DEGREES OF FREEDOM
+Info: 1358 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 1358 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 19635.9 amu
+Info: TOTAL CHARGE = 1 e
+Info: *****************************
+Info: Reading from binary file 2cyhsemi.coor
+Info: 
+Info: Entering startup at 0.424172 s, 88.4844 MB of memory in use
+Info: Startup phase 0 took 2.69413e-05 s, 88.4844 MB of memory in use
+Info: ADDED 13964 IMPLICIT EXCLUSIONS
+Info: Startup phase 1 took 0.00183201 s, 89.5625 MB of memory in use
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: ABSOLUTE IMPRECISION IN FAST TABLE ENERGY: 2.53117e-21 AT 11.9974
+Info: RELATIVE IMPRECISION IN FAST TABLE ENERGY: 1.68907e-16 AT 11.9974
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290274 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+Info: Startup phase 2 took 0.0023191 s, 93.7656 MB of memory in use
+Info: Startup phase 3 took 1.78814e-05 s, 93.7656 MB of memory in use
+Info: Startup phase 4 took 1.3113e-05 s, 93.7656 MB of memory in use
+Info: Startup phase 5 took 1.19209e-05 s, 93.7656 MB of memory in use
+Info: ORIGINAL ATOMS MINMAX IS -2.47032 -3.32062 -6.43733  37.0836 31.1611 34.2575
+Info: ADJUSTED ATOMS MINMAX IS 0.253553 2.86954 0.134924  32.061 28.4026 28.5606
+Info: PATCH GRID IS 2 BY 2 BY 2
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: Reading from binary file 2cyhsemi.vel
+Info: REMOVING COM VELOCITY 0.0807695 0.298655 0.10126
+Info: LARGEST PATCH (2) HAS 400 ATOMS
+Info: TORUS A SIZE 1 USING 0
+Info: TORUS B SIZE 1 USING 0
+Info: TORUS C SIZE 1 USING 0
+Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
+Info: Placed 100% of base nodes on same physical node as patch
+Info: Startup phase 6 took 0.000880003 s, 94.1836 MB of memory in use
+Info: Startup phase 7 took 1.69277e-05 s, 94.1836 MB of memory in use
+Info: Startup phase 8 took 1.21593e-05 s, 94.1836 MB of memory in use
+Info: Startup phase 9 took 1.19209e-05 s, 94.1836 MB of memory in use
+Info: Startup phase 10 took 1.00136e-05 s, 94.1836 MB of memory in use
+Info: Startup phase 11 took 1.19209e-05 s, 94.1836 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 12 took 2.00272e-05 s, 94.1836 MB of memory in use
+Info: CREATING 81 COMPUTE OBJECTS
+Info: Startup phase 13 took 0.000224113 s, 94.1836 MB of memory in use
+Info: Startup phase 14 took 1.69277e-05 s, 94.1836 MB of memory in use
+Info: Startup phase 15 took 3.40939e-05 s, 95.293 MB of memory in use
+Info: Finished startup at 0.429631 s, 95.293 MB of memory in use
+
+TCL: Original numsteps 50000 will be ignored.
+TCL: Running for 50000 steps
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:       0       527.7150      1409.3267      1606.0088        96.9235          -5574.1442      -389.2621         0.0000         0.0000      2119.9534           -203.4789       312.8931     -2323.4323      -180.1820       312.8931
+
+OPENING EXTENDED SYSTEM TRAJECTORY FILE
+LDB: ============= START OF LOAD BALANCING ============== 0.631356
+LDB: ============== END OF LOAD BALANCING =============== 0.631413
+LDB: =============== DONE WITH MIGRATION ================ 0.631505
+LDB: ============= START OF LOAD BALANCING ============== 1.39879
+LDB: ============== END OF LOAD BALANCING =============== 1.39883
+LDB: =============== DONE WITH MIGRATION ================ 1.39895
+Info: Initial time: 1 CPUs 0.00966485 s/step 0.0559308 days/ns 101.445 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 1.58899
+LDB: ============== END OF LOAD BALANCING =============== 1.58902
+LDB: =============== DONE WITH MIGRATION ================ 1.58913
+LDB: ============= START OF LOAD BALANCING ============== 2.35179
+LDB: ============== END OF LOAD BALANCING =============== 2.35183
+LDB: =============== DONE WITH MIGRATION ================ 2.35193
+Info: Initial time: 1 CPUs 0.00957305 s/step 0.0553996 days/ns 101.445 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 3.35809
+LDB: ============== END OF LOAD BALANCING =============== 3.35813
+LDB: =============== DONE WITH MIGRATION ================ 3.35827
+Info: Initial time: 1 CPUs 0.0100194 s/step 0.0579829 days/ns 101.445 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 4.30884
+LDB: ============== END OF LOAD BALANCING =============== 4.30889
+LDB: =============== DONE WITH MIGRATION ================ 4.30905
+Info: Benchmark time: 1 CPUs 0.00950525 s/step 0.0550072 days/ns 101.445 MB memory
+Info: Benchmark time: 1 CPUs 0.00936836 s/step 0.054215 days/ns 101.445 MB memory
+ENERGY:     500       523.8857      1514.7470      1579.7404        95.9324          -5540.7437      -390.9020         0.0000         0.0000      2043.3914           -173.9489       301.5930     -2217.3402      -152.5032       306.9397
+
+Info: Benchmark time: 1 CPUs 0.00936223 s/step 0.0541796 days/ns 101.445 MB memory
+Info: Benchmark time: 1 CPUs 0.00904113 s/step 0.0523213 days/ns 101.445 MB memory
+Info: Benchmark time: 1 CPUs 0.00918434 s/step 0.0531501 days/ns 101.445 MB memory
+Info: Benchmark time: 1 CPUs 0.00887648 s/step 0.0513685 days/ns 101.445 MB memory
+TIMING: 1000  CPU: 9.36542, 0.00934727/step  Wall: 9.37045, 0.00935089/step, 0.127276 hours remaining, 101.445312 MB of memory in use.
+ENERGY:    1000       551.9248      1432.3443      1570.2440        88.0978          -5545.6360      -372.9342         0.0000         0.0000      2067.3555           -208.6039       305.1300     -2275.9594      -186.7519       306.0568
+
+ENERGY:    1500       536.2659      1397.8364      1586.1985        96.7186          -5545.4248      -413.7736         0.0000         0.0000      2065.9409           -276.2381       304.9212     -2342.1791      -250.2414       304.0004
+
+TIMING: 2000  CPU: 18.8247, 0.00945923/step  Wall: 18.8394, 0.00946894/step, 0.126252 hours remaining, 101.445312 MB of memory in use.
+ENERGY:    2000       529.0333      1458.5962      1590.7113        83.7352          -5564.2908      -410.4133         0.0000         0.0000      2018.1544           -294.4737       297.8682     -2312.6280      -273.3276       300.1189
+
+ENERGY:    2500       546.9406      1451.4202      1566.6121       100.9116          -5581.2194      -414.0046         0.0000         0.0000      2019.7984           -309.5410       298.1108     -2329.3394      -286.9115       299.0639
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 2500
+OPENING COORDINATE DCD FILE
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 2500
+WRITING COORDINATES TO RESTART FILE AT STEP 2500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=2500) takes 0.000 seconds, 102.113 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 2500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=2500) takes 0.000 seconds, 102.113 MB of memory in use
+TIMING: 3000  CPU: 31.1676, 0.0123429/step  Wall: 31.1821, 0.0123427/step, 0.161141 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    3000       516.1233      1438.1431      1597.4676        94.5048          -5648.0231      -354.5522         0.0000         0.0000      2000.0168           -356.3196       295.1912     -2356.3364      -333.4457       301.4019
+
+ENERGY:    3500       554.2769      1466.8232      1558.9378        86.3295          -5611.7861      -412.7397         0.0000         0.0000      1966.2140           -391.9445       290.2020     -2358.1584      -371.9055       295.2053
+
+TIMING: 4000  CPU: 45.9033, 0.0147357/step  Wall: 45.9185, 0.0147364/step, 0.188299 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    4000       536.6707      1434.0221      1588.5915        86.7308          -5600.6145      -383.0617         0.0000         0.0000      2001.6657           -335.9954       295.4345     -2337.6611      -312.5858       296.7004
+
+LDB: ============= START OF LOAD BALANCING ============== 49.3782
+LDB: ============== END OF LOAD BALANCING =============== 49.3782
+LDB: =============== DONE WITH MIGRATION ================ 49.3784
+LDB: ============= START OF LOAD BALANCING ============== 50.3451
+LDB: ============== END OF LOAD BALANCING =============== 50.3452
+LDB: =============== DONE WITH MIGRATION ================ 50.3453
+ENERGY:    4500       506.8839      1433.5188      1586.0036        91.0080          -5567.7312      -378.6760         0.0000         0.0000      2026.1825           -302.8105       299.0531     -2328.9930      -279.5896       296.9637
+
+TIMING: 5000  CPU: 55.5592, 0.00965597/step  Wall: 55.5774, 0.00965895/step, 0.120737 hours remaining, 102.113281 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:    5000       474.5025      1429.1838      1559.1549       102.1483          -5562.5782      -392.2657         0.0000         0.0000      1982.8214           -407.0329       292.6532     -2389.8543      -383.3910       294.9150
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 5000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 5000
+WRITING COORDINATES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=5000) takes 0.000 seconds, 102.113 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=5000) takes 0.000 seconds, 102.113 MB of memory in use
+ENERGY:    5500       537.1631      1398.0690      1564.4308        96.2775          -5577.4836      -422.4693         0.0000         0.0000      2027.9369           -376.0756       299.3120     -2404.0125      -353.8706       291.7868
+
+TIMING: 6000  CPU: 64.9752, 0.00941596/step  Wall: 64.992, 0.00941463/step, 0.115068 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    6000       507.7661      1449.2161      1550.7608        89.1381          -5588.3770      -346.9442         0.0000         0.0000      1950.8113           -387.6288       287.9287     -2338.4400      -367.0382       294.1112
+
+ENERGY:    6500       543.3780      1415.9399      1550.2206        92.2176          -5605.9903      -408.4159         0.0000         0.0000      2030.5821           -382.0682       299.7024     -2412.6502      -357.9597       296.6896
+
+TIMING: 7000  CPU: 74.6672, 0.00969196/step  Wall: 74.6858, 0.00969376/step, 0.115787 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    7000       538.1372      1394.5279      1571.8326        82.7049          -5632.0304      -376.5202         0.0000         0.0000      2008.2834           -413.0647       296.4113     -2421.3481      -389.7480       295.2906
+
+ENERGY:    7500       504.2295      1465.8990      1561.0474        96.2666          -5634.0099      -385.9378         0.0000         0.0000      2017.6166           -374.8886       297.7888     -2392.5052      -351.7093       294.2199
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 7500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 7500
+WRITING COORDINATES TO RESTART FILE AT STEP 7500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=7500) takes 0.000 seconds, 102.113 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 7500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=7500) takes 0.000 seconds, 102.113 MB of memory in use
+TIMING: 8000  CPU: 90.0271, 0.0153599/step  Wall: 90.0427, 0.0153569/step, 0.179164 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    8000       523.9746      1403.0338      1566.6148        90.7985          -5590.4171      -443.3853         0.0000         0.0000      2063.1430           -386.2377       304.5082     -2449.3807      -360.4161       296.8777
+
+LDB: ============= START OF LOAD BALANCING ============== 94.924
+LDB: ============== END OF LOAD BALANCING =============== 94.9241
+LDB: =============== DONE WITH MIGRATION ================ 94.9241
+LDB: ============= START OF LOAD BALANCING ============== 96.0166
+LDB: ============== END OF LOAD BALANCING =============== 96.0166
+LDB: =============== DONE WITH MIGRATION ================ 96.0167
+ENERGY:    8500       509.9643      1394.9666      1566.7047        96.5788          -5545.8992      -439.4488         0.0000         0.0000      1982.4553           -434.6782       292.5992     -2417.1335      -411.3922       295.4707
+
+TIMING: 9000  CPU: 101.769, 0.0117417/step  Wall: 101.793, 0.0117498/step, 0.133817 hours remaining, 102.113281 MB of memory in use.
+ENERGY:    9000       527.4338      1415.6568      1554.1136        92.5963          -5607.8865      -411.6971         0.0000         0.0000      1986.3382           -443.4449       293.1723     -2429.7830      -420.4413       290.3577
+
+ENERGY:    9500       521.4853      1435.4234      1541.1825        93.8082          -5599.3620      -374.5428         0.0000         0.0000      2083.5407           -298.4646       307.5188     -2382.0053      -271.2547       296.5898
+
+TIMING: 10000  CPU: 111.442, 0.00967333/step  Wall: 111.474, 0.00968097/step, 0.107566 hours remaining, 102.292969 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   10000       514.0324      1459.9656      1574.0096        88.1220          -5564.4204      -380.5331         0.0000         0.0000      2082.5442           -226.2798       307.3717     -2308.8240      -201.6470       303.2483
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 10000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 10000
+WRITING COORDINATES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=10000) takes 0.000 seconds, 102.293 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=10000) takes 0.000 seconds, 102.293 MB of memory in use
+ENERGY:   10500       534.2183      1460.3392      1579.7687        88.3898          -5604.8136      -381.2172         0.0000         0.0000      2071.2681           -252.0467       305.7074     -2323.3148      -225.4339       305.4872
+
+TIMING: 11000  CPU: 120.866, 0.00942392/step  Wall: 120.896, 0.00942263/step, 0.102078 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   11000       546.9572      1456.4829      1571.9916       100.3117          -5589.1404      -407.1083         0.0000         0.0000      2079.3937           -241.1116       306.9067     -2320.5053      -217.4042       304.7970
+
+ENERGY:   11500       582.1593      1457.4117      1565.5660        97.9902          -5608.7998      -400.2849         0.0000         0.0000      2035.7576           -270.1999       300.4663     -2305.9575      -247.5741       303.1608
+
+TIMING: 12000  CPU: 130.77, 0.00990396/step  Wall: 130.798, 0.00990198/step, 0.104521 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   12000       526.5757      1434.2567      1575.8441        92.9895          -5603.9158      -367.7024         0.0000         0.0000      2097.9164           -244.0357       309.6406     -2341.9521      -220.0934       305.2913
+
+LDB: ============= START OF LOAD BALANCING ============== 136.262
+LDB: ============== END OF LOAD BALANCING =============== 136.262
+LDB: =============== DONE WITH MIGRATION ================ 136.263
+LDB: ============= START OF LOAD BALANCING ============== 138.009
+LDB: ============== END OF LOAD BALANCING =============== 138.009
+LDB: =============== DONE WITH MIGRATION ================ 138.009
+ENERGY:   12500       534.4627      1445.7400      1557.1551        78.9669          -5546.0085      -386.3441         0.0000         0.0000      2069.4265           -246.6014       305.4356     -2316.0279      -221.2281       305.4626
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 12500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 12500
+WRITING COORDINATES TO RESTART FILE AT STEP 12500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=12500) takes 0.000 seconds, 102.293 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 12500
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=12500) takes 0.000 seconds, 102.293 MB of memory in use
+TIMING: 13000  CPU: 148.2, 0.0174302/step  Wall: 148.234, 0.0174356/step, 0.179199 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   13000       562.0994      1419.3169      1573.4907        88.1033          -5533.5866      -443.5282         0.0000         0.0000      2056.7865           -277.3179       303.5700     -2334.1044      -254.6851       305.5006
+
+ENERGY:   13500       566.6817      1423.6646      1561.4116        92.7336          -5538.1667      -442.9440         0.0000         0.0000      2061.0267           -275.5925       304.1959     -2336.6192      -249.7726       302.9361
+
+TIMING: 14000  CPU: 161.828, 0.013628/step  Wall: 161.859, 0.0136255/step, 0.136255 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   14000       556.5351      1434.0065      1574.1264        88.7530          -5549.7883      -425.1484         0.0000         0.0000      2070.8927           -250.6229       305.6520     -2321.5156      -225.8640       301.9263
+
+ENERGY:   14500       505.9009      1408.8304      1601.1898        95.7142          -5558.9802      -411.9477         0.0000         0.0000      2064.8840           -294.4086       304.7652     -2359.2926      -269.0793       302.4530
+
+TIMING: 15000  CPU: 171.444, 0.00961597/step  Wall: 171.475, 0.00961595/step, 0.0934884 hours remaining, 102.292969 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   15000       488.0104      1463.3978      1614.4479       100.4423          -5627.8239      -408.1930         0.0000         0.0000      2049.7216           -319.9970       302.5273     -2369.7186      -296.2076       301.2813
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 15000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 15000
+WRITING COORDINATES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=15000) takes 0.000 seconds, 102.293 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   15500       493.6709      1445.7454      1574.2464        91.1959          -5570.1230      -363.3553         0.0000         0.0000      2079.9396           -248.6801       306.9873     -2328.6197      -223.2896       304.8704
+
+TIMING: 16000  CPU: 181.108, 0.00966398/step  Wall: 181.141, 0.00966604/step, 0.0912904 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   16000       545.4255      1447.5572      1576.6898        94.1184          -5621.7585      -386.4940         0.0000         0.0000      2044.6144           -299.8472       301.7735     -2344.4616      -277.1509       303.4007
+
+LDB: ============= START OF LOAD BALANCING ============== 184.476
+LDB: ============== END OF LOAD BALANCING =============== 184.476
+LDB: =============== DONE WITH MIGRATION ================ 184.476
+LDB: ============= START OF LOAD BALANCING ============== 185.939
+LDB: ============== END OF LOAD BALANCING =============== 185.939
+LDB: =============== DONE WITH MIGRATION ================ 185.939
+ENERGY:   16500       503.7180      1496.5136      1571.3027        89.8118          -5553.2031      -398.4880         0.0000         0.0000      2007.2447           -283.1003       296.2580     -2290.3450      -261.5873       301.9208
+
+TIMING: 17000  CPU: 195.644, 0.014536/step  Wall: 195.674, 0.0145333/step, 0.133222 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   17000       508.0074      1426.3958      1579.6487        98.1613          -5608.2880      -397.5421         0.0000         0.0000      2118.3629           -275.2540       312.6584     -2393.6169      -250.3322       301.4860
+
+ENERGY:   17500       549.1110      1450.2102      1568.4014       104.7512          -5645.1398      -396.4177         0.0000         0.0000      2062.7991           -306.2845       304.4575     -2369.0836      -281.3865       302.9082
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 17500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 17500
+WRITING COORDINATES TO RESTART FILE AT STEP 17500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=17500) takes 0.000 seconds, 102.293 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 17500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 18000  CPU: 207.892, 0.012248/step  Wall: 207.926, 0.0122516/step, 0.108903 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   18000       521.8468      1490.6944      1585.1159        88.7504          -5625.2948      -402.0541         0.0000         0.0000      2066.7582           -274.1832       305.0418     -2340.9414      -248.4683       303.6994
+
+ENERGY:   18500       528.2718      1492.5860      1561.3700        87.6754          -5595.3264      -442.1096         0.0000         0.0000      2069.0262           -298.5066       305.3766     -2367.5328      -273.5973       301.8852
+
+TIMING: 19000  CPU: 217.556, 0.00966398/step  Wall: 217.59, 0.00966392/step, 0.0832171 hours remaining, 102.292969 MB of memory in use.
+ENERGY:   19000       564.0144      1442.2869      1569.5763       101.4832          -5640.0018      -384.7967         0.0000         0.0000      2027.2087           -320.2289       299.2045     -2347.4376      -297.2424       301.4311
+
+ENERGY:   19500       540.7841      1447.7379      1575.1416        91.6227          -5615.8629      -406.4891         0.0000         0.0000      2037.8589           -329.2068       300.7764     -2367.0656      -305.9044       302.8443
+
+TIMING: 20000  CPU: 227.264, 0.00970798/step  Wall: 227.297, 0.00970742/step, 0.0808952 hours remaining, 102.484375 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   20000       512.9222      1465.1071      1574.5416        96.0066          -5621.9859      -420.8422         0.0000         0.0000      2062.5696           -331.6810       304.4236     -2394.2506      -307.2805       301.6558
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 20000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 20000
+WRITING COORDINATES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=20000) takes 0.000 seconds, 102.484 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART VELOCITIES
+LDB: ============= START OF LOAD BALANCING ============== 231.866
+LDB: ============== END OF LOAD BALANCING =============== 231.866
+LDB: =============== DONE WITH MIGRATION ================ 231.866
+LDB: ============= START OF LOAD BALANCING ============== 233.433
+LDB: ============== END OF LOAD BALANCING =============== 233.433
+LDB: =============== DONE WITH MIGRATION ================ 233.433
+ENERGY:   20500       552.4477      1444.7606      1545.8792        91.4251          -5558.1914      -436.1708         0.0000         0.0000      2065.9626           -293.8869       304.9244     -2359.8494      -270.0832       301.3812
+
+TIMING: 21000  CPU: 239.324, 0.0120599/step  Wall: 239.355, 0.0120576/step, 0.097131 hours remaining, 102.484375 MB of memory in use.
+ENERGY:   21000       545.0378      1411.3117      1558.1862        98.1206          -5560.3235      -402.0121         0.0000         0.0000      2000.7982           -348.8811       295.3065     -2349.6793      -327.4868       299.8772
+
+ENERGY:   21500       516.1345      1431.8254      1556.2161        83.6984          -5612.2139      -394.8434         0.0000         0.0000      2024.3220           -394.8609       298.7785     -2419.1829      -372.2455       300.3022
+
+TIMING: 22000  CPU: 253.34, 0.014016/step  Wall: 253.371, 0.0140162/step, 0.109015 hours remaining, 102.484375 MB of memory in use.
+ENERGY:   22000       517.2476      1414.6206      1557.6001        99.3892          -5563.8782      -396.2152         0.0000         0.0000      2032.6689           -338.5671       300.0104     -2371.2360      -314.8345       297.0467
+
+ENERGY:   22500       547.4034      1414.3129      1557.0742        99.2650          -5598.0348      -382.9825         0.0000         0.0000      2052.6407           -310.3212       302.9581     -2362.9618      -283.9830       300.3345
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 22500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 22500
+WRITING COORDINATES TO RESTART FILE AT STEP 22500
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=22500) takes 0.000 seconds, 102.484 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 22500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 23000  CPU: 263.876, 0.010536/step  Wall: 263.907, 0.010536/step, 0.0790203 hours remaining, 102.484375 MB of memory in use.
+ENERGY:   23000       532.6904      1447.2336      1571.7673        86.9396          -5612.8120      -422.4700         0.0000         0.0000      2058.5566           -338.0945       303.8313     -2396.6510      -312.9257       298.5464
+
+ENERGY:   23500       527.4003      1481.6109      1562.6353        91.1706          -5629.1177      -378.7318         0.0000         0.0000      2066.1252           -278.9072       304.9484     -2345.0324      -255.1582       302.5923
+
+TIMING: 24000  CPU: 277.036, 0.01316/step  Wall: 277.069, 0.0131619/step, 0.0950584 hours remaining, 102.484375 MB of memory in use.
+ENERGY:   24000       567.6490      1446.4768      1558.2191        94.8737          -5630.7738      -398.0197         0.0000         0.0000      2094.5670           -267.0079       309.1462     -2361.5749      -243.3957       304.8548
+
+LDB: ============= START OF LOAD BALANCING ============== 282.762
+LDB: ============== END OF LOAD BALANCING =============== 282.762
+LDB: =============== DONE WITH MIGRATION ================ 282.762
+LDB: ============= START OF LOAD BALANCING ============== 284.555
+LDB: ============== END OF LOAD BALANCING =============== 284.555
+LDB: =============== DONE WITH MIGRATION ================ 284.555
+ENERGY:   24500       537.5665      1399.0325      1573.5651        91.4437          -5546.7624      -410.1147         0.0000         0.0000      2121.9039           -233.3653       313.1810     -2355.2692      -206.5271       307.6991
+
+TIMING: 25000  CPU: 291.808, 0.0147716/step  Wall: 291.846, 0.0147771/step, 0.102619 hours remaining, 102.656250 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   25000       548.3305      1491.0932      1552.9289        83.3444          -5566.6214      -411.4759         0.0000         0.0000      2116.4815           -185.9189       312.3807     -2302.4004      -160.8941       308.7279
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 25000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 25000
+WRITING COORDINATES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=25000) takes 0.000 seconds, 102.656 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   25500       542.6128      1497.7556      1577.4433        97.8776          -5625.9787      -387.3326         0.0000         0.0000      2077.1967           -220.4254       306.5825     -2297.6220      -198.0710       308.3075
+
+TIMING: 26000  CPU: 301.775, 0.00996797/step  Wall: 301.818, 0.00997171/step, 0.0664781 hours remaining, 102.656250 MB of memory in use.
+ENERGY:   26000       567.3300      1470.3663      1581.2074        86.9973          -5545.2565      -430.1866         0.0000         0.0000      2063.5468           -205.9953       304.5678     -2269.5421      -184.6163       306.4052
+
+ENERGY:   26500       553.5625      1486.7291      1576.1251        74.6046          -5522.7671      -444.5092         0.0000         0.0000      2076.5896           -199.6654       306.4929     -2276.2550      -177.2638       307.5581
+
+TIMING: 27000  CPU: 311.799, 0.010024/step  Wall: 311.839, 0.0100212/step, 0.0640241 hours remaining, 102.656250 MB of memory in use.
+ENERGY:   27000       531.7758      1460.0066      1561.8563        97.9838          -5594.9974      -384.7142         0.0000         0.0000      2024.9816           -303.1076       298.8758     -2328.0891      -276.9923       302.8861
+
+ENERGY:   27500       550.7624      1467.3424      1551.3782        87.2462          -5599.5634      -399.1158         0.0000         0.0000      2056.8230           -285.1270       303.5754     -2341.9500      -259.0033       302.8088
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 27500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 27500
+WRITING COORDINATES TO RESTART FILE AT STEP 27500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 27500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 28000  CPU: 324.299, 0.0125/step  Wall: 324.341, 0.0125016/step, 0.0763985 hours remaining, 102.656250 MB of memory in use.
+ENERGY:   28000       551.3058      1470.1299      1571.2940        98.8510          -5515.9553      -455.4253         0.0000         0.0000      2002.1961           -277.6037       295.5128     -2279.7998      -255.5192       304.4869
+
+LDB: ============= START OF LOAD BALANCING ============== 327.738
+LDB: ============== END OF LOAD BALANCING =============== 327.738
+LDB: =============== DONE WITH MIGRATION ================ 327.738
+LDB: ============= START OF LOAD BALANCING ============== 328.873
+LDB: ============== END OF LOAD BALANCING =============== 328.873
+LDB: =============== DONE WITH MIGRATION ================ 328.873
+ENERGY:   28500       544.2983      1445.3264      1559.0889        92.2264          -5567.3941      -395.9730         0.0000         0.0000      2114.1608           -208.2663       312.0382     -2322.4271      -186.0606       304.7205
+
+TIMING: 29000  CPU: 337.502, 0.0132026/step  Wall: 337.542, 0.0132017/step, 0.0770097 hours remaining, 102.785156 MB of memory in use.
+ENERGY:   29000       549.7516      1506.3462      1583.8539       100.7824          -5647.2330      -372.7845         0.0000         0.0000      2080.2573           -199.0261       307.0342     -2279.2834      -173.5401       308.1707
+
+ENERGY:   29500       524.1909      1446.2069      1570.7042        89.3616          -5574.8590      -390.0350         0.0000         0.0000      2114.5527           -219.8777       312.0960     -2334.4304      -194.0225       309.1966
+
+TIMING: 30000  CPU: 348.602, 0.0111/step  Wall: 348.644, 0.0111011/step, 0.061673 hours remaining, 102.785156 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   30000       525.2121      1465.1802      1590.0885        99.2205          -5553.9023      -437.5714         0.0000         0.0000      2053.6906           -258.0819       303.1131     -2311.7725      -235.1103       306.0952
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 30000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 30000
+WRITING COORDINATES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   30500       500.4234      1472.5225      1570.2846        95.0388          -5594.6714      -402.2356         0.0000         0.0000      2062.4472           -296.1904       304.4055     -2358.6377      -273.8008       303.0333
+
+TIMING: 31000  CPU: 359.054, 0.010452/step  Wall: 359.096, 0.0104529/step, 0.055168 hours remaining, 102.785156 MB of memory in use.
+ENERGY:   31000       519.4843      1407.5303      1564.7780        93.0215          -5607.1968      -383.1314         0.0000         0.0000      2058.1545           -347.3597       303.7719     -2405.5142      -322.4166       302.2282
+
+ENERGY:   31500       530.8822      1420.7083      1569.7837        92.2419          -5560.4973      -387.0846         0.0000         0.0000      2065.8478           -268.1180       304.9074     -2333.9658      -242.7108       301.9455
+
+TIMING: 32000  CPU: 369.934, 0.01088/step  Wall: 369.977, 0.0108809/step, 0.0544043 hours remaining, 102.785156 MB of memory in use.
+ENERGY:   32000       547.7778      1465.8221      1582.8561        91.1785          -5633.8285      -393.4493         0.0000         0.0000      2085.2478           -254.3954       307.7708     -2339.6432      -230.7440       304.3499
+
+LDB: ============= START OF LOAD BALANCING ============== 375.912
+LDB: ============== END OF LOAD BALANCING =============== 375.912
+LDB: =============== DONE WITH MIGRATION ================ 375.912
+LDB: ============= START OF LOAD BALANCING ============== 379.887
+LDB: ============== END OF LOAD BALANCING =============== 379.887
+LDB: =============== DONE WITH MIGRATION ================ 379.887
+ENERGY:   32500       550.6296      1468.6038      1549.1410        97.2186          -5595.7686      -415.8221         0.0000         0.0000      2028.7409           -317.2569       299.4307     -2345.9978      -294.9175       302.5514
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 32500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 32500
+WRITING COORDINATES TO RESTART FILE AT STEP 32500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 32500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 33000  CPU: 395.417, 0.0254831/step  Wall: 395.484, 0.0255066/step, 0.120448 hours remaining, 102.785156 MB of memory in use.
+ENERGY:   33000       534.6203      1465.4398      1551.8791        88.8565          -5558.2064      -420.6233         0.0000         0.0000      1978.5052           -359.5287       292.0162     -2338.0340      -336.5249       300.3363
+
+ENERGY:   33500       526.9871      1434.7684      1592.0894        99.3750          -5569.8673      -394.8583         0.0000         0.0000      2004.1227           -307.3830       295.7972     -2311.5057      -284.5766       298.4423
+
+TIMING: 34000  CPU: 409.659, 0.0142422/step  Wall: 409.731, 0.0142475/step, 0.0633223 hours remaining, 102.785156 MB of memory in use.
+ENERGY:   34000       525.1093      1438.0360      1561.3356        89.5298          -5571.5422      -436.7235         0.0000         0.0000      2096.5889           -297.6660       309.4447     -2394.2550      -270.9119       301.5701
+
+ENERGY:   34500       534.7491      1463.4718      1523.4888        91.4498          -5588.6961      -396.8758         0.0000         0.0000      1989.2834           -383.1290       293.6070     -2372.4124      -360.8321       299.9873
+
+TIMING: 35000  CPU: 419.583, 0.00992397/step  Wall: 419.658, 0.00992617/step, 0.0413591 hours remaining, 102.785156 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   35000       535.0867      1434.6280      1554.8809        97.5357          -5608.2573      -395.2732         0.0000         0.0000      2054.8228           -326.5765       303.2802     -2381.3993      -302.3369       298.8014
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 35000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 35000
+WRITING COORDINATES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   35500       523.9438      1427.3549      1563.1368        96.8475          -5628.3384      -363.2322         0.0000         0.0000      1977.1903           -403.0972       291.8221     -2380.2875      -379.0585       297.9091
+
+TIMING: 36000  CPU: 429.407, 0.00982397/step  Wall: 429.481, 0.00982325/step, 0.0382015 hours remaining, 102.941406 MB of memory in use.
+ENERGY:   36000       570.3414      1451.7974      1551.7639        85.8720          -5561.8858      -445.0127         0.0000         0.0000      2020.7756           -326.3483       298.2550     -2347.1238      -304.0630       298.3635
+
+LDB: ============= START OF LOAD BALANCING ============== 432.827
+LDB: ============== END OF LOAD BALANCING =============== 432.827
+LDB: =============== DONE WITH MIGRATION ================ 432.827
+LDB: ============= START OF LOAD BALANCING ============== 433.783
+LDB: ============== END OF LOAD BALANCING =============== 433.783
+LDB: =============== DONE WITH MIGRATION ================ 433.783
+ENERGY:   36500       520.6376      1455.8177      1577.1282        87.2791          -5611.3535      -399.8361         0.0000         0.0000      2070.9476           -299.3794       305.6601     -2370.3270      -278.1914       298.5071
+
+TIMING: 37000  CPU: 439.231, 0.00982398/step  Wall: 439.303, 0.00982247/step, 0.03547 hours remaining, 102.941406 MB of memory in use.
+ENERGY:   37000       574.0467      1421.4571      1579.1386        84.9275          -5567.3480      -432.4861         0.0000         0.0000      2052.4571           -287.8071       302.9310     -2340.2642      -264.5470       300.6960
+
+ENERGY:   37500       550.1975      1494.6263      1576.5321        98.3563          -5580.2077      -429.5657         0.0000         0.0000      2043.3138           -246.7474       301.5815     -2290.0612      -222.5628       302.9086
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 37500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 37500
+WRITING COORDINATES TO RESTART FILE AT STEP 37500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 37500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 38000  CPU: 465.093, 0.0258617/step  Wall: 465.202, 0.0258983/step, 0.0863276 hours remaining, 102.941406 MB of memory in use.
+ENERGY:   38000       535.9252      1463.6623      1541.3389       101.2171          -5498.0896      -472.8722         0.0000         0.0000      2094.2750           -234.5433       309.1031     -2328.8183      -209.5575       304.5671
+
+ENERGY:   38500       546.2482      1471.2479      1582.5452        99.2644          -5560.4408      -419.4991         0.0000         0.0000      2033.1829           -247.4513       300.0863     -2280.6343      -225.6188       305.5867
+
+TIMING: 39000  CPU: 485.106, 0.0200128/step  Wall: 485.219, 0.0200175/step, 0.0611647 hours remaining, 102.941406 MB of memory in use.
+ENERGY:   39000       521.7965      1473.3316      1565.2726        87.7308          -5596.0212      -408.3740         0.0000         0.0000      2098.8483           -257.4155       309.7781     -2356.2638      -231.7165       305.7762
+
+ENERGY:   39500       541.0736      1443.1870      1577.0501        91.6616          -5647.3873      -384.0048         0.0000         0.0000      2101.4913           -276.9286       310.1682     -2378.4199      -251.6141       304.8114
+
+TIMING: 40000  CPU: 495.898, 0.010792/step  Wall: 496.013, 0.0107943/step, 0.0299842 hours remaining, 102.941406 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   40000       550.8082      1450.5841      1562.9847        93.0243          -5618.1019      -404.0383         0.0000         0.0000      2078.2111           -286.5279       306.7322     -2364.7390      -261.7016       305.2070
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 40000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 40000
+WRITING COORDINATES TO RESTART FILE AT STEP 40000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 40000
+FINISHED WRITING RESTART VELOCITIES
+LDB: ============= START OF LOAD BALANCING ============== 499.374
+LDB: ============== END OF LOAD BALANCING =============== 499.374
+LDB: =============== DONE WITH MIGRATION ================ 499.374
+LDB: ============= START OF LOAD BALANCING ============== 500.364
+LDB: ============== END OF LOAD BALANCING =============== 500.364
+LDB: =============== DONE WITH MIGRATION ================ 500.364
+ENERGY:   40500       537.8898      1427.0075      1560.1357        84.8900          -5628.6804      -379.1026         0.0000         0.0000      2062.1029           -335.7571       304.3547     -2397.8600      -312.4171       300.5712
+
+TIMING: 41000  CPU: 507.643, 0.0117453/step  Wall: 507.767, 0.0117537/step, 0.0293843 hours remaining, 102.941406 MB of memory in use.
+ENERGY:   41000       515.0984      1464.5944      1585.3953       104.2255          -5609.0320      -405.7156         0.0000         0.0000      2042.2694           -303.1646       301.4274     -2345.4339      -279.4245       300.7573
+
+ENERGY:   41500       559.8762      1451.6256      1561.5956        94.1046          -5586.7215      -415.2647         0.0000         0.0000      2054.5702           -280.2140       303.2429     -2334.7842      -257.4277       302.4432
+
+TIMING: 42000  CPU: 522.747, 0.0151039/step  Wall: 522.871, 0.0151035/step, 0.0335633 hours remaining, 103.097656 MB of memory in use.
+ENERGY:   42000       531.4476      1465.5735      1578.2904        88.1504          -5600.7112      -395.0170         0.0000         0.0000      2087.8164           -244.4498       308.1499     -2332.2663      -222.1564       304.8051
+
+ENERGY:   42500       511.9259      1482.7713      1599.9337        85.6626          -5568.9136      -431.1376         0.0000         0.0000      2089.1010           -230.6567       308.3395     -2319.7577      -205.3795       305.7024
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 42500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 42500
+WRITING COORDINATES TO RESTART FILE AT STEP 42500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 42500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 43000  CPU: 532.699, 0.00995196/step  Wall: 532.823, 0.00995194/step, 0.019351 hours remaining, 103.300781 MB of memory in use.
+ENERGY:   43000       556.3910      1411.2977      1575.6581        84.8612          -5590.3238      -375.9869         0.0000         0.0000      2144.7997           -193.3030       316.5603     -2338.1027      -168.3193       308.6923
+
+ENERGY:   43500       536.7583      1471.7297      1586.0072        93.2241          -5627.7766      -374.6140         0.0000         0.0000      2111.4003           -203.2710       311.6307     -2314.6713      -178.4155       309.6238
+
+TIMING: 44000  CPU: 542.687, 0.00998798/step  Wall: 542.814, 0.00999144/step, 0.0166524 hours remaining, 103.300781 MB of memory in use.
+ENERGY:   44000       555.4597      1461.7595      1577.4770        97.4407          -5621.3886      -369.7415         0.0000         0.0000      2107.4348           -191.5584       311.0454     -2298.9932      -166.7266       309.3828
+
+LDB: ============= START OF LOAD BALANCING ============== 546.17
+LDB: ============== END OF LOAD BALANCING =============== 546.17
+LDB: =============== DONE WITH MIGRATION ================ 546.171
+LDB: ============= START OF LOAD BALANCING ============== 547.153
+LDB: ============== END OF LOAD BALANCING =============== 547.153
+LDB: =============== DONE WITH MIGRATION ================ 547.153
+ENERGY:   44500       570.3776      1433.4225      1584.8821        99.8304          -5587.5123      -397.9257         0.0000         0.0000      2114.0262           -182.8992       312.0183     -2296.9254      -155.8573       310.2428
+
+TIMING: 45000  CPU: 554.61, 0.0119229/step  Wall: 554.743, 0.0119291/step, 0.0165682 hours remaining, 103.300781 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   45000       536.9994      1459.1237      1595.3141        98.2115          -5602.5933      -381.4521         0.0000         0.0000      2033.1651           -261.2316       300.0837     -2294.3967      -238.0998       305.6627
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 45000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 45000
+WRITING COORDINATES TO RESTART FILE AT STEP 45000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 45000
+FINISHED WRITING RESTART VELOCITIES
+ENERGY:   45500       521.6228      1455.5904      1574.7467       111.3981          -5602.4937      -376.2806         0.0000         0.0000      2065.1523           -250.2640       304.8048     -2315.4164      -223.5789       304.5059
+
+TIMING: 46000  CPU: 565.418, 0.0108082/step  Wall: 565.562, 0.0108188/step, 0.0120209 hours remaining, 103.300781 MB of memory in use.
+ENERGY:   46000       513.8371      1525.9308      1584.0248        90.0718          -5663.6019      -384.0214         0.0000         0.0000      2129.7089           -204.0499       314.3330     -2333.7587      -179.2982       306.6575
+
+ENERGY:   46500       522.7833      1446.2126      1569.9277        97.1367          -5555.8506      -412.5926         0.0000         0.0000      2101.2194           -231.1635       310.1281     -2332.3830      -205.9308       306.8229
+
+TIMING: 47000  CPU: 579.166, 0.013748/step  Wall: 579.308, 0.013746/step, 0.011455 hours remaining, 103.457031 MB of memory in use.
+ENERGY:   47000       527.9774      1445.9827      1563.3734        97.7786          -5531.7743      -461.1893         0.0000         0.0000      2090.2676           -267.5840       308.5117     -2357.8516      -243.4666       304.3990
+
+ENERGY:   47500       535.6700      1412.2804      1546.2775       102.7396          -5543.7306      -392.9060         0.0000         0.0000      2050.8706           -288.7985       302.6969     -2339.6691      -264.6534       303.2868
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 47500
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 47500
+WRITING COORDINATES TO RESTART FILE AT STEP 47500
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 47500
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 48000  CPU: 589.11, 0.00994398/step  Wall: 589.252, 0.00994372/step, 0.00552429 hours remaining, 103.457031 MB of memory in use.
+ENERGY:   48000       526.9699      1493.4987      1569.1180        83.8480          -5606.4782      -401.0432         0.0000         0.0000      2053.0940           -280.9928       303.0251     -2334.0868      -258.3303       304.0394
+
+LDB: ============= START OF LOAD BALANCING ============== 594.764
+LDB: ============== END OF LOAD BALANCING =============== 594.764
+LDB: =============== DONE WITH MIGRATION ================ 594.764
+LDB: ============= START OF LOAD BALANCING ============== 596.531
+LDB: ============== END OF LOAD BALANCING =============== 596.531
+LDB: =============== DONE WITH MIGRATION ================ 596.531
+ENERGY:   48500       513.7201      1446.2377      1560.7539       108.0969          -5594.4494      -400.3233         0.0000         0.0000      2034.5633           -331.4008       300.2900     -2365.9641      -309.6698       303.5667
+
+TIMING: 49000  CPU: 605.698, 0.016588/step  Wall: 605.841, 0.0165898/step, 0.00460828 hours remaining, 103.457031 MB of memory in use.
+ENERGY:   49000       540.6392      1459.4610      1547.8740       102.4680          -5610.8270      -410.9085         0.0000         0.0000      2024.2493           -347.0439       298.7677     -2371.2932      -324.0890       300.0600
+
+ENERGY:   49500       535.0577      1458.9162      1581.6973        89.3077          -5638.4087      -391.2205         0.0000         0.0000      2007.7806           -356.8696       296.3371     -2364.6502      -335.4947       295.9533
+
+TIMING: 50000  CPU: 615.798, 0.0100999/step  Wall: 615.94, 0.0100987/step, 0 hours remaining, 103.457031 MB of memory in use.
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:   50000       528.6220      1392.4975      1584.7464       101.1052          -5586.7147      -392.2814         0.0000         0.0000      1989.9427           -382.0823       293.7043     -2372.0250      -358.5143       298.5692
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 50000
+WRITING COORDINATES TO DCD FILE 2cyhfinal.dcd AT STEP 50000
+WRITING COORDINATES TO RESTART FILE AT STEP 50000
+FINISHED WRITING RESTART COORDINATES
+WRITING VELOCITIES TO RESTART FILE AT STEP 50000
+FINISHED WRITING RESTART VELOCITIES
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 50000
+CLOSING EXTENDED SYSTEM TRAJECTORY FILE
+WRITING COORDINATES TO OUTPUT FILE AT STEP 50000
+CLOSING COORDINATE DCD FILE 2cyhfinal.dcd
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 50000
+====================================================
+
+WallClock: 616.444275  CPUTime: 616.230408  Memory: 103.457031 MB
+[Partition 0][Node 0] End of program
